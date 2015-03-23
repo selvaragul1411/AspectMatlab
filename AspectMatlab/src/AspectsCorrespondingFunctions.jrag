@@ -1,0 +1,335 @@
+
+/*
+Author: Toheed Aslam
+Date: May 01, 2010
+*/
+
+import aspectMatlab.AspectsEngine;
+
+/*
+//	Expression Simplification
+*/
+
+aspect AspectsCorrespondingFunctions {
+	
+	syn boolean Program.aspectsCorrespondingFunctions() { throw new UnsupportedOperationException(getClass().getName() + ".aspectCorrespondingFunctions()"); }
+     
+    eq EmptyProgram.aspectsCorrespondingFunctions() = true;
+
+    eq Script.aspectsCorrespondingFunctions() {
+    	for(Stmt stmt : getStmts()) {
+    		stmt.aspectsCorrespondingFunctions();
+		}
+		
+		return true;
+    }
+    
+    eq FunctionList.aspectsCorrespondingFunctions() {
+        for(Function func : getFunctions()) {
+        	func.aspectsCorrespondingFunctions();
+    	}
+    	
+        return true;
+    }
+    
+    eq ClassDef.aspectsCorrespondingFunctions() {
+
+        return true;
+    }
+       
+    public void Function.aspectsCorrespondingFunctions() {       
+    	//if(!getName().startsWith("AM_CF_")) {
+		//System.out.println("Corresponding Function function: " + getName());
+	    	for(Stmt stmt : getStmts()) {
+	    		stmt.aspectsCorrespondingFunctions();
+	        }
+	        
+	        //Transform the input params to assignment stmts
+	        AspectsEngine.generateCorrespondingStmt(this);
+	        
+	        for(Function func : getNestedFunctions()) {
+	    			func.aspectsCorrespondingFunctions();
+	    	}
+    	//}
+    }
+    
+	syn Boolean Stmt.aspectsCorrespondingFunctions() { return true; }
+              
+    eq ExprStmt.aspectsCorrespondingFunctions() {
+    	getExpr().aspectsCorrespondingFunctions();
+    	return true;
+    }
+    
+    eq AssignStmt.aspectsCorrespondingFunctions() {
+    	if(getRHS().getWeavability())
+    		getRHS().aspectsCorrespondingFunctions();
+    	
+    	if(getLHS() instanceof ParameterizedExpr) {
+    		for(Expr arg : ((ParameterizedExpr)getLHS()).getArgs()) {
+           		if(!arg.aspectsCorrespondingFunctions())
+           			return false;
+        	}
+        } else if(getLHS() instanceof CellIndexExpr) {
+    		for(Expr arg : ((CellIndexExpr)getLHS()).getArgs()) {
+           		if(!arg.aspectsCorrespondingFunctions())
+           			return false;
+        	}
+        }
+    	
+    	return true;
+    }
+    
+    eq ForStmt.aspectsCorrespondingFunctions() {
+	   	getAssignStmt().aspectsCorrespondingFunctions();
+	   	for(Stmt stmt : getStmts()) {
+           	stmt.aspectsCorrespondingFunctions();
+        }
+        
+        AspectsEngine.transformForStmt((ast.List)getParent());
+        
+        return true;
+    }
+    
+    eq WhileStmt.aspectsCorrespondingFunctions() {
+    	//TODO: is it correct?
+    	//getExpr().aspectsCorrespondingFunctions();
+    	
+	   	for(Stmt stmt : getStmts()) {
+           	stmt.aspectsCorrespondingFunctions();
+        }
+        
+        AspectsEngine.transformWhileStmt((ast.List)getParent());
+        
+        return true;
+    } 
+    
+    eq TryStmt.aspectsCorrespondingFunctions() {
+	   	for(Stmt stmt : getTryStmts()) {
+           	stmt.aspectsCorrespondingFunctions();
+        }
+        for(Stmt stmt : getCatchStmts()) {
+           	stmt.aspectsCorrespondingFunctions();
+        }
+        
+        return true;
+    } 
+    
+    eq SwitchStmt.aspectsCorrespondingFunctions() {
+    	getExpr().aspectsCorrespondingFunctions();
+    	
+	   	for(SwitchCaseBlock sb : getSwitchCaseBlocks()) {
+	   		sb.getExpr().aspectsCorrespondingFunctions();
+	   	
+           	for(Stmt stmt : sb.getStmts()) {
+	           	stmt.aspectsCorrespondingFunctions();
+	        }
+        }
+        
+        if(hasDefaultCaseBlock()) {
+	        for(Stmt stmt : getDefaultCaseBlock().getStmts()) {
+		        stmt.aspectsCorrespondingFunctions();
+		    }
+	    }
+	    
+	    return true;
+    } 
+    
+    eq IfStmt.aspectsCorrespondingFunctions() {
+	   	for(IfBlock ib : getIfBlocks()) {
+	   		ib.getCondition().aspectsCorrespondingFunctions();
+	   		
+           	for(Stmt stmt : ib.getStmts()) {
+	           	stmt.aspectsCorrespondingFunctions();
+	        }
+        }
+        
+        if(hasElseBlock()) {
+	        for(Stmt stmt : getElseBlock().getStmts()) {
+		        stmt.aspectsCorrespondingFunctions();
+		    }
+	    }
+	    
+	    return true;
+    }
+	
+	syn boolean Expr.aspectsCorrespondingFunctions() { return true; }
+ 	
+ 	
+	eq ShortCircuitAndExpr.aspectsCorrespondingFunctions(){
+		return true;
+	}
+	
+	
+	eq ShortCircuitOrExpr.aspectsCorrespondingFunctions(){
+		return true;
+	}
+	
+	eq NameExpr.aspectsCorrespondingFunctions() {
+		//AspectsEngine.generateCorrespondingFunction(this);
+		AspectsEngine.generateCorrespondingStmt(this);
+		return true;
+	}
+	
+	eq ParameterizedExpr.aspectsCorrespondingFunctions() {
+		for(Expr arg : getArgs()) {
+           	if(!arg.aspectsCorrespondingFunctions())
+           		return false;
+        }
+        
+        //TODO
+ 		//getTarget().aspectsCorrespondingFunctions();
+        //AspectsEngine.generateCorrespondingFunction(this);
+        AspectsEngine.generateCorrespondingStmt(this);
+        
+		return true;
+ 	}
+ 	
+ 	eq RangeExpr.aspectsCorrespondingFunctions() {
+ 		if(!getLower().aspectsCorrespondingFunctions())
+           	return false;
+        if(!getUpper().aspectsCorrespondingFunctions())
+           	return false;
+        //getLower().aspectsCorrespondingFunctions();
+ 		//getUpper().aspectsCorrespondingFunctions();
+ 		
+ 		if(hasIncr()) {
+ 			if(!getIncr().aspectsCorrespondingFunctions())
+           		return false;
+ 			//getIncr().aspectsCorrespondingFunctions();
+ 		}
+ 		
+ 		return true;
+ 	}
+
+	eq CellIndexExpr.aspectsCorrespondingFunctions() { 		
+ 		for(Expr arg : getArgs()) {
+           	if(!arg.aspectsCorrespondingFunctions())
+           		return false;
+        }
+ 		
+ 		//TODO
+ 		//getTarget().aspectsCorrespondingFunctions();
+ 		//AspectsEngine.generateCorrespondingFunction(this);
+ 		AspectsEngine.generateCorrespondingStmt(this);
+ 		
+ 		return true;
+ 	}
+ 	
+ 	eq DotExpr.aspectsCorrespondingFunctions() {
+ 		//getField().aspectsCorrespondingFunctions();
+ 		
+ 		//TODO
+ 		//getTarget().aspectsCorrespondingFunctions();
+ 		//AspectsEngine.generateCorrespondingFunction(this);
+ 		AspectsEngine.generateCorrespondingStmt(this);
+ 		
+ 		return true;
+ 	}
+
+	eq MatrixExpr.aspectsCorrespondingFunctions() {
+		for(Row row : getRows()) {
+			for(Expr exp : row.getElements()) {
+				exp.aspectsCorrespondingFunctions();
+			}
+        }
+        
+        return true;
+    }
+	
+	eq CellArrayExpr.aspectsCorrespondingFunctions() {
+		for(Row row : getRows()) {
+			for(Expr exp : row.getElements()) {
+				exp.aspectsCorrespondingFunctions();
+			}
+        }
+        
+        return true;
+    }
+    
+    eq SuperClassMethodExpr.aspectsCorrespondingFunctions() {
+		//getClassName().aspectsCorrespondingFunctions();
+ 		//getFuncName().aspectsCorrespondingFunctions();
+ 		
+ 		return true;
+    }
+    
+	eq UnaryExpr.aspectsCorrespondingFunctions() {
+		//getOperand().aspectsCorrespondingFunctions();
+ 		if(!getOperand().aspectsCorrespondingFunctions())
+           		return false;
+           		
+ 		return true;
+    }
+	
+	eq BinaryExpr.aspectsCorrespondingFunctions() {
+       	ast.List<Stmt> stmtList = null;
+       	ExprStmt parenteStmt = null;
+       	AssignStmt parentaStmt = null;
+       	
+ 		if(!getLHS().aspectsCorrespondingFunctions())
+           		return false;
+        if(!getRHS().aspectsCorrespondingFunctions())
+           		return false;
+           		
+      ASTNode<ASTNode> parentStmt = getParent();
+      
+		   while(!(parentStmt instanceof Stmt)){
+				parentStmt = parentStmt.getParent();
+				
+			}
+	   if(parentStmt instanceof AssignStmt){
+			parentaStmt = (AssignStmt)parentStmt;
+			if(parentaStmt.getParent() instanceof ForStmt){
+				return false;
+			}
+            stmtList = (ast.List) parentaStmt.getParent();
+       }else if(parentStmt instanceof ExprStmt){
+       		parenteStmt = (ExprStmt)parentStmt;
+            stmtList = (ast.List) parenteStmt.getParent();
+		}else{
+		return true;
+      }
+       
+       if(getParent() instanceof AssignStmt){
+       		
+			if(((((AssignStmt)getParent()).getLHS()) instanceof NameExpr)&&!("AM_tempBE".regionMatches(0,((NameExpr)((AssignStmt)getParent()).getLHS()).getName().getVarName(),0,3))){
+       		 	//Simplifying the highest level (AssignStmt lhs this)
+      			 AspectsEngine.transformBinaryExpr(this,stmtList,stmtList.getIndexOfChild(parentaStmt));
+       		}else{
+       		 //the BExpr was already simplified
+       		return true;
+       		}
+       }else if(getParent() instanceof ExprStmt || getParent() instanceof List){
+       		AspectsEngine.transformBinaryExpr(this,stmtList,stmtList.getIndexOfChild(parenteStmt));
+   
+       }else{
+       	  // the BExpr is  indented
+          AspectsEngine.transformBinaryExpr(this,stmtList,stmtList.getIndexOfChild(parentaStmt==null?parenteStmt:parentaStmt));
+       }   		
+      
+          		
+ 		return true;
+    }
+	
+	eq FunctionHandleExpr.aspectsCorrespondingFunctions() {
+		//getName().aspectsCorrespondingFunctions();
+ 		
+ 		return true;
+    }
+    
+    eq LambdaExpr.aspectsCorrespondingFunctions() {
+ 		//TODO
+ 		//getBody().aspectsCorrespondingFunctions();
+ 		
+ 		//for(Name arg : getInputParams()) {
+        //   	arg.aspectsCorrespondingFunctions();
+        //}
+ 		
+ 		return true;
+ 	}
+ 	
+ 	eq EndExpr.aspectsCorrespondingFunctions() {
+ 		//can't take it out of array
+ 		return false;
+ 	}
+}

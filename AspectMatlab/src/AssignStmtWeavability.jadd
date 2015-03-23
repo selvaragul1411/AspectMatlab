@@ -1,0 +1,31 @@
+
+/*
+Author: Toheed Aslam
+Date: May 01, 2010
+
+
+//	Assignment Statement Weavability
+//	helpful in case of weaved statements
+*/
+
+aspect AssignStmtWeavability {
+
+	private boolean AssignStmt.isWeavable = true;
+    private boolean Expr.isWeavable = true;
+    private boolean Expr.isCFStmtDone = false;
+    
+    public void AssignStmt.setWeavability(boolean isWeavable, boolean applyDeep) { 
+    	this.isWeavable = isWeavable;
+    	if(applyDeep) {
+    		this.getLHS().setWeavability(isWeavable);
+    		this.getRHS().setWeavability(isWeavable);
+    	}
+    }
+    public boolean AssignStmt.getWeavability() { return this.isWeavable; }
+	
+	public void Expr.setWeavability(boolean isWeavable) { this.isWeavable = isWeavable; }
+    public boolean Expr.getWeavability() { return this.isWeavable; }
+    
+    public void Expr.setCFStmtDone(boolean isCFStmtDone) { this.isCFStmtDone = isCFStmtDone; }
+    public boolean Expr.getCFStmtDone() { return this.isCFStmtDone; }
+}

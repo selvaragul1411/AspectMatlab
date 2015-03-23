@@ -1,0 +1,71 @@
+
+/*
+Author: Toheed Aslam
+Date: May 01, 2010
+*/
+
+/*
+//	Static semantics error collection
+*/
+
+aspect Weeding {
+
+  	public boolean Aspect.weeding() {
+	  	java.util.List<String> errors = new java.util.ArrayList<String>();
+	    String match = "";
+	    
+	    if(getName().compareTo(getFileName().replace(".m", "")) != 0)
+	    	errors.add(getPosString() + "Aspect name must be same as the file name!");
+	    
+	    for(Patterns pats : getPatterns()) {
+        	for(Pattern pat : pats.getPatterns()) {
+        		String name = pat.getName();
+        		if(match.indexOf(name+",") >= 0)
+	           		errors.add(pat.getPosString() + name + " pattern already exists!");
+	           	else
+	           		match += name+",";
+       		}
+       	}
+       	
+       	match = "";
+       	
+       	// a list of valid selectors followed by a comma
+       	String selectors = "args,newVal,obj,name,line,counter,loc,file,aobj,ainput,aoutput,pat,";
+       	
+       	for(Actions acts : getActions()) {
+           for(AspectAction act : acts.getAspectActions()) {
+        		String name = act.getName();
+        		if(match.indexOf(name+",") >= 0)
+	           		errors.add(act.getPosString() + name + " action already exists!");
+	           	else
+	           		match += name+",";
+	           	
+	           	for(Name selector : act.getSelectors())
+		        	if(selectors.indexOf(selector.getID()+",") == -1)
+		            	errors.add(act.getPosString() + selector.getID() + " is not a valid selector!");
+       		}
+       	}
+	
+	    if(errors.isEmpty())
+	    	return true;
+	    	
+		System.out.println("Error(s):");
+		for(String error : errors) {
+			System.out.println(error);
+		}
+	    
+	    return false;
+	}
+	
+	public String Aspect.getPosString() {
+    	return "[" + getLine(getStart()) + ", " + getColumn(getStart()) + "]  ";
+	}
+	
+	public String Pattern.getPosString() {
+    	return "[" + getLine(getStart()) + ", " + getColumn(getStart()) + "]  ";
+	}
+	
+	public String AspectAction.getPosString() {
+    	return "[" + getLine(getStart()) + ", " + getColumn(getStart()) + "]  ";
+	}
+}

@@ -1,0 +1,10 @@
+%component aspects_annotation
+
+%extern "Symbol symbol(short)"
+%%
+%%inherit shared_symbols
+
+"%@" {: return symbol(ANNOTATION_START); :}
+
+%%inherit shared_keywords
+

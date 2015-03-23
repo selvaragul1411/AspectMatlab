@@ -1,0 +1,1680 @@
+Buildfile: /home/2008/abodza/mclabdev/languages/AspectMatlab/build.xml
+Trying to override old definition of task javac
+
+natlab.build:
+
+matlab.build:
+
+compile.test.generators:
+
+def.jflex.task:
+
+jflex.function.end:
+
+jflex.command:
+
+jflex.length:
+
+jflex.trivial:
+
+jflex:
+
+def.antlr3.task:
+
+antlr.matlab:
+
+antlr:
+
+set.bin.dir.no.eclipse:
+
+set.bin.dir.eclipse:
+
+BinDir.set.bin.dir:
+
+set.bin.dir:
+
+gen.scanner.tests:
+
+gen.translator.tests:
+
+gen.tests:
+
+gen:
+
+compile.with.tests:
+    [javac] Warning: matlab/MatlabScannerTests.java modified in the future.
+    [javac] Warning: matlab/MatlabTranslatorTests.java modified in the future.
+    [javac] Compiling 2 source files to /home/2008/abodza/mclabdev/languages/Matlab/bin-ant
+
+build:
+
+compile.test.generators:
+
+def.jflex.task:
+
+metalexer:
+     [java] Checking natlab in src/metalexer
+     [java] VALID
+
+jflex:
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4077): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_base_IntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4103): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_base_FPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4122): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_base_HexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4141): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_base_ImaginaryIntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4160): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_base_ImaginaryFPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4179): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_base_ImaginaryHexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4205): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_base_Identifier} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4863): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_IntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4889): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_FPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4908): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_HexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4927): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_ImaginaryIntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4946): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_ImaginaryFPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4965): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_ImaginaryHexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4991): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_Identifier} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 5649): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_bracketed_IntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 5675): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_bracketed_FPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 5694): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_bracketed_HexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 5713): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_bracketed_ImaginaryIntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 5732): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_bracketed_ImaginaryFPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 5751): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_bracketed_ImaginaryHexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 5777): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_bracketed_Identifier} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 5862): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_field_name_Identifier} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4006): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     end {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 4792): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     end {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/Natlab/gen/metalexer/natlab.flex" (line 5578): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     end {
+    [jflex] 
+    [jflex] Generated: NatlabScanner.java
+
+def.beaver.task:
+
+parser:
+     [java] Parser specification gen/parser/NatlabParser.grammar need not be regenerated
+   [beaver] NatlabParser.grammar: Generated: NatlabParser.java
+
+def.jastadd.task:
+
+jastadd:
+
+Gen.gen-parser:
+
+options:
+
+gen:
+
+set.matlab.bin.dir.no.eclipse:
+
+set.matlab.bin.dir.eclipse:
+
+set.matlab.bin.dir:
+
+set.bin.dir.no.eclipse:
+
+set.bin.dir.eclipse:
+
+BinDir.set.bin.dir:
+
+set.bin.dir:
+
+compile:
+    [javac] Warning: natlab/NatlabParser.java modified in the future.
+    [javac] Warning: natlab/NatlabScanner.java modified in the future.
+    [javac] Compiling 3 source files to /home/2008/abodza/mclabdev/languages/Natlab/bin-ant
+    [javac] Note: /home/2008/abodza/mclabdev/languages/Natlab/gen/natlab/NatlabParser.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+
+CommandLineInterface.build:
+
+build:
+
+compile.test.generators:
+
+def.jflex.task:
+
+metalexer:
+     [java] Checking aspects_matlab in ../Natlab/src/metalexer;src/metalexer
+     [java] WARNING - src/metalexer/aspects_matlab.mll [8, 1]  Clobbering option from ../Natlab/src/metalexer/natlab.mll.
+     [java] VALID
+
+jflex:
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 6777): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_IntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 6803): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_FPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 6822): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_HexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 6841): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_ImaginaryIntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 6860): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_ImaginaryFPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 6879): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_ImaginaryHexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 6905): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_Identifier} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 7568): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_action_IntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 7594): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_action_FPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 7613): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_action_HexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 7632): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_action_ImaginaryIntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 7651): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_action_ImaginaryFPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 7670): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_action_ImaginaryHexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 7696): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_action_Identifier} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8694): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspects_base_IntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8720): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspects_base_FPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8739): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspects_base_HexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8758): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspects_base_ImaginaryIntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8777): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspects_base_ImaginaryFPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8796): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspects_base_ImaginaryHexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8843): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspects_base_IntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8869): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspects_base_FPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8888): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspects_base_HexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8907): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspects_base_ImaginaryIntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8926): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspects_base_ImaginaryFPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8945): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspects_base_ImaginaryHexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8971): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspects_base_Identifier} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 9728): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_pattern_IntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 9754): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_pattern_FPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 9773): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_pattern_HexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 9792): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_pattern_ImaginaryIntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 9811): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_pattern_ImaginaryFPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 9830): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_pattern_ImaginaryHexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 9856): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_aspect_pattern_Identifier} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 10541): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_IntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 10567): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_FPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 10586): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_HexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 10605): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_ImaginaryIntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 10624): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_ImaginaryFPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 10643): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_ImaginaryHexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 10669): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_Identifier} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 11327): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_bracketed_IntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 11353): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_bracketed_FPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 11372): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_bracketed_HexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 11391): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_bracketed_ImaginaryIntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 11410): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_bracketed_ImaginaryFPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 11429): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_bracketed_ImaginaryHexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 11455): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_class_bracketed_Identifier} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 11540): 
+    [jflex] Dangerous lookahead expression, yytext might contain too many characters.
+    [jflex] 
+    [jflex]     {m_field_name_Identifier} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 6706): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     end {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 7497): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     end {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8087): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_OpenBracketHelpComment} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8099): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_OpenBracketComment} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8111): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_LineTerminator} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8118): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_OtherWhiteSpace} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8125): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8137): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     \( {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8149): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     \) / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8161): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     \) {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8173): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     \[ {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8185): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     \] / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8197): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     \] {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8209): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     \{ {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8221): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     \} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8233): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     \} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8245): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     , {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8257): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     ; {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8269): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     : {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8276): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     @ {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8283): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "+" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8290): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "-" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8297): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "*" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8304): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     ".*" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8311): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "/" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8318): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "./" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8325): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "\\" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8332): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     ".\\" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8339): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "^" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8346): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     ".^" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8353): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     ".'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8360): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "<=" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8367): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     ">=" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8374): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "<" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8381): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     ">" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8388): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "==" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8395): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "~=" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8402): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "&" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8409): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "|" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8416): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "~" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8423): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "&&" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8430): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "||" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8437): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "=" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8599): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     end {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8646): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_LineTerminator} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8658): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_OtherWhiteSpace} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8822): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_HelpComment} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8829): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_Comment} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8836): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_EscapedLineTerminator} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8843): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_IntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8855): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_IntNumber} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8862): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_IntNumber}"."[*/\\\^'] {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8869): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_FPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8881): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_FPNumber} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8888): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_HexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8900): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_HexNumber} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8907): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_ImaginaryIntNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8919): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_ImaginaryIntNumber} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8926): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_ImaginaryFPNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8938): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_ImaginaryFPNumber} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8945): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_ImaginaryHexNumber} / "'" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8957): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_ImaginaryHexNumber} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 8964): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     {m_aspects_base_ShellCommand} {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 9241): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     "*" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 9248): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     ".*" {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 9550): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     function {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 9657): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     end {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 10470): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     end {
+    [jflex] 
+    [jflex] 
+    [jflex] Warning in file "/home/2008/abodza/mclabdev/languages/AspectMatlab/gen/metalexer/aspects_matlab.flex" (line 11256): 
+    [jflex] Rule can never be matched:
+    [jflex] 
+    [jflex]     end {
+    [jflex] 
+    [jflex] Generated: AspectsScanner.java
+
+def.beaver.task:
+
+parser:
+     [java] Parser specification gen/parser/AspectsParser.grammar need not be regenerated
+   [beaver] AspectsParser.grammar: Generated: AspectsParser.java
+
+def.jastadd.task:
+
+jastadd:
+    [mkdir] Created dir: /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast
+  [jastadd] generating node types and weaving aspects
+  [jastadd] done
+
+Gen.gen-parser:
+
+set.natlab.bin.dir.no.eclipse:
+
+set.natlab.bin.dir.eclipse:
+
+set.natlab.bin.dir:
+
+set.matlab.bin.dir.no.eclipse:
+
+set.matlab.bin.dir.eclipse:
+
+set.matlab.bin.dir:
+
+set.bin.dir.no.eclipse:
+
+set.bin.dir.eclipse:
+
+BinDir.set.bin.dir:
+
+set.bin.dir:
+
+gen.scanner.tests:
+     [echo] Generating scanner tests
+
+gen.parser.pass.tests:
+     [echo] Generating parser pass tests
+
+gen.parser.fail.tests:
+     [echo] Generating parser fail tests
+
+gen.tests:
+
+gen:
+
+compile.with.tests:
+    [javac] Warning: aspectMatlab/AspectParserFailTests.java modified in the future.
+    [javac] Warning: aspectMatlab/AspectParserPassTests.java modified in the future.
+    [javac] Warning: aspectMatlab/AspectScannerTests.java modified in the future.
+    [javac] Warning: aspectMatlab/AspectsParser.java modified in the future.
+    [javac] Warning: aspectMatlab/AspectsScanner.java modified in the future.
+    [javac] Warning: aspectsast/ASTNode$State.java modified in the future.
+    [javac] Warning: aspectsast/ASTNode.java modified in the future.
+    [javac] Warning: aspectsast/Actions.java modified in the future.
+    [javac] Warning: aspectsast/AndExpr.java modified in the future.
+    [javac] Warning: aspectsast/ArrayTransposeExpr.java modified in the future.
+    [javac] Warning: aspectsast/Aspect.java modified in the future.
+    [javac] Warning: aspectsast/AspectAction.java modified in the future.
+    [javac] Warning: aspectsast/AspectBody.java modified in the future.
+    [javac] Warning: aspectsast/AssignStmt.java modified in the future.
+    [javac] Warning: aspectsast/Attribute.java modified in the future.
+    [javac] Warning: aspectsast/BinaryExpr.java modified in the future.
+    [javac] Warning: aspectsast/Body.java modified in the future.
+    [javac] Warning: aspectsast/BreakStmt.java modified in the future.
+    [javac] Warning: aspectsast/CSLExpr.java modified in the future.
+    [javac] Warning: aspectsast/CellArrayExpr.java modified in the future.
+    [javac] Warning: aspectsast/CellIndexExpr.java modified in the future.
+    [javac] Warning: aspectsast/CheckScalarStmt.java modified in the future.
+    [javac] Warning: aspectsast/ClassBody.java modified in the future.
+    [javac] Warning: aspectsast/ClassDef.java modified in the future.
+    [javac] Warning: aspectsast/ClassEvents.java modified in the future.
+    [javac] Warning: aspectsast/ColonExpr.java modified in the future.
+    [javac] Warning: aspectsast/CompilationUnits.java modified in the future.
+    [javac] Warning: aspectsast/ContinueStmt.java modified in the future.
+    [javac] Warning: aspectsast/DefaultCaseBlock.java modified in the future.
+    [javac] Warning: aspectsast/DotExpr.java modified in the future.
+    [javac] Warning: aspectsast/EDivExpr.java modified in the future.
+    [javac] Warning: aspectsast/ELDivExpr.java modified in the future.
+    [javac] Warning: aspectsast/EPowExpr.java modified in the future.
+    [javac] Warning: aspectsast/EQExpr.java modified in the future.
+    [javac] Warning: aspectsast/ETimesExpr.java modified in the future.
+    [javac] Warning: aspectsast/ElseBlock.java modified in the future.
+    [javac] Warning: aspectsast/EmptyProgram.java modified in the future.
+    [javac] Warning: aspectsast/EmptyStmt.java modified in the future.
+    [javac] Warning: aspectsast/EndCallExpr.java modified in the future.
+    [javac] Warning: aspectsast/EndExpr.java modified in the future.
+    [javac] Warning: aspectsast/Event.java modified in the future.
+    [javac] Warning: aspectsast/Expr.java modified in the future.
+    [javac] Warning: aspectsast/ExprStmt.java modified in the future.
+    [javac] Warning: aspectsast/FPLiteralExpr.java modified in the future.
+    [javac] Warning: aspectsast/ForStmt.java modified in the future.
+    [javac] Warning: aspectsast/Function.java modified in the future.
+    [javac] Warning: aspectsast/FunctionHandleExpr.java modified in the future.
+    [javac] Warning: aspectsast/FunctionList.java modified in the future.
+    [javac] Warning: aspectsast/FunctionOrSignatureOrPropertyAccessOrStmt.java modified in the future.
+    [javac] Warning: aspectsast/GEExpr.java modified in the future.
+    [javac] Warning: aspectsast/GTExpr.java modified in the future.
+    [javac] Warning: aspectsast/GlobalStmt.java modified in the future.
+    [javac] Warning: aspectsast/HelpComment.java modified in the future.
+    [javac] Warning: aspectsast/IfBlock.java modified in the future.
+    [javac] Warning: aspectsast/IfStmt.java modified in the future.
+    [javac] Warning: aspectsast/IntLiteralExpr.java modified in the future.
+    [javac] Warning: aspectsast/LEExpr.java modified in the future.
+    [javac] Warning: aspectsast/LTExpr.java modified in the future.
+    [javac] Warning: aspectsast/LValueExpr.java modified in the future.
+    [javac] Warning: aspectsast/LambdaExpr.java modified in the future.
+    [javac] Warning: aspectsast/List.java modified in the future.
+    [javac] Warning: aspectsast/LiteralExpr.java modified in the future.
+    [javac] Warning: aspectsast/MDivExpr.java modified in the future.
+    [javac] Warning: aspectsast/MLDivExpr.java modified in the future.
+    [javac] Warning: aspectsast/MPowExpr.java modified in the future.
+    [javac] Warning: aspectsast/MTimesExpr.java modified in the future.
+    [javac] Warning: aspectsast/MTransposeExpr.java modified in the future.
+    [javac] Warning: aspectsast/MatrixExpr.java modified in the future.
+    [javac] Warning: aspectsast/Methods.java modified in the future.
+    [javac] Warning: aspectsast/MinusExpr.java modified in the future.
+    [javac] Warning: aspectsast/MultiLineHelpComment.java modified in the future.
+    [javac] Warning: aspectsast/NEExpr.java modified in the future.
+    [javac] Warning: aspectsast/Name.java modified in the future.
+    [javac] Warning: aspectsast/NameExpr.java modified in the future.
+    [javac] Warning: aspectsast/NotExpr.java modified in the future.
+    [javac] Warning: aspectsast/OneLineHelpComment.java modified in the future.
+    [javac] Warning: aspectsast/Opt.java modified in the future.
+    [javac] Warning: aspectsast/OrExpr.java modified in the future.
+    [javac] Warning: aspectsast/ParameterizedExpr.java modified in the future.
+    [javac] Warning: aspectsast/Pattern.java modified in the future.
+    [javac] Warning: aspectsast/PatternDesignator.java modified in the future.
+    [javac] Warning: aspectsast/Patterns.java modified in the future.
+    [javac] Warning: aspectsast/PersistentStmt.java modified in the future.
+    [javac] Warning: aspectsast/PlusExpr.java modified in the future.
+    [javac] Warning: aspectsast/Program.java modified in the future.
+    [javac] Warning: aspectsast/Properties.java modified in the future.
+    [javac] Warning: aspectsast/Property.java modified in the future.
+    [javac] Warning: aspectsast/PropertyAccess.java modified in the future.
+    [javac] Warning: aspectsast/RangeExpr.java modified in the future.
+    [javac] Warning: aspectsast/ReturnStmt.java modified in the future.
+    [javac] Warning: aspectsast/Row.java modified in the future.
+    [javac] Warning: aspectsast/Script.java modified in the future.
+    [javac] Warning: aspectsast/ShellCommandStmt.java modified in the future.
+    [javac] Warning: aspectsast/ShortCircuitAndExpr.java modified in the future.
+    [javac] Warning: aspectsast/ShortCircuitOrExpr.java modified in the future.
+    [javac] Warning: aspectsast/Signature.java modified in the future.
+    [javac] Warning: aspectsast/Stmt.java modified in the future.
+    [javac] Warning: aspectsast/StringLiteralExpr.java modified in the future.
+    [javac] Warning: aspectsast/SuperClass.java modified in the future.
+    [javac] Warning: aspectsast/SuperClassMethodExpr.java modified in the future.
+    [javac] Warning: aspectsast/SwitchCaseBlock.java modified in the future.
+    [javac] Warning: aspectsast/SwitchStmt.java modified in the future.
+    [javac] Warning: aspectsast/TryStmt.java modified in the future.
+    [javac] Warning: aspectsast/UMinusExpr.java modified in the future.
+    [javac] Warning: aspectsast/UPlusExpr.java modified in the future.
+    [javac] Warning: aspectsast/UnaryExpr.java modified in the future.
+    [javac] Warning: aspectsast/WhileStmt.java modified in the future.
+    [javac] Compiling 108 source files to /home/2008/abodza/mclabdev/languages/AspectMatlab/bin-ant
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/ASTNode.java:109: error: method caseASTNode in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseASTNode(this);
+    [javac]                ^
+    [javac]   required: ast.ASTNode
+    [javac]   found: aspectsast.ASTNode<T>
+    [javac]   reason: actual argument aspectsast.ASTNode<T> cannot be converted to ast.ASTNode by method invocation conversion
+    [javac]   where T is a type-variable:
+    [javac]     T extends aspectsast.ASTNode declared in class aspectsast.ASTNode
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Expr.java:58: error: method caseExpr in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseExpr(this);
+    [javac]                ^
+    [javac]   required: ast.Expr
+    [javac]   found: aspectsast.Expr
+    [javac]   reason: actual argument aspectsast.Expr cannot be converted to ast.Expr by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/LValueExpr.java:46: error: method caseLValueExpr in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseLValueExpr(this);
+    [javac]                ^
+    [javac]   required: ast.LValueExpr
+    [javac]   found: aspectsast.LValueExpr
+    [javac]   reason: actual argument aspectsast.LValueExpr cannot be converted to ast.LValueExpr by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/NameExpr.java:108: error: method caseNameExpr in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseNameExpr(this);
+    [javac]                ^
+    [javac]   required: ast.NameExpr
+    [javac]   found: aspectsast.NameExpr
+    [javac]   reason: actual argument aspectsast.NameExpr cannot be converted to ast.NameExpr by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/NameExpr.java:372: error: no suitable method found for generateCorrespondingStmt(NameExpr)
+    [javac] 		AspectsEngine.generateCorrespondingStmt(this);
+    [javac] 		             ^
+    [javac]     method AspectsEngine.generateCorrespondingStmt(Function) is not applicable
+    [javac]       (actual argument NameExpr cannot be converted to Function by method invocation conversion)
+    [javac]     method AspectsEngine.generateCorrespondingStmt(Expr) is not applicable
+    [javac]       (actual argument NameExpr cannot be converted to Expr by method invocation conversion)
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/NameExpr.java:431: error: method transformProceedCall in class AspectsEngine cannot be applied to given types;
+    [javac] 		AspectsEngine.transformProceedCall(this);
+    [javac] 		             ^
+    [javac]   required: Expr
+    [javac]   found: NameExpr
+    [javac]   reason: actual argument NameExpr cannot be converted to Expr by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/NameExpr.java:464: error: method ShadowMatch in class Expr cannot be applied to given types;
+    [javac]  				&& AspectsEngine.patternsListNew.get(getName().getID()).ShadowMatch(target, pattern, args, jp));
+    [javac]  				                                                       ^
+    [javac]   required: String,String,int,ast.ASTNode
+    [javac]   found: String,String,int,aspectsast.ASTNode
+    [javac]   reason: actual argument aspectsast.ASTNode cannot be converted to ast.ASTNode by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/FunctionOrSignatureOrPropertyAccessOrStmt.java:46: error: method caseFunctionOrSignatureOrPropertyAccessOrStmt in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseFunctionOrSignatureOrPropertyAccessOrStmt(this);
+    [javac]                ^
+    [javac]   required: ast.FunctionOrSignatureOrPropertyAccessOrStmt
+    [javac]   found: aspectsast.FunctionOrSignatureOrPropertyAccessOrStmt
+    [javac]   reason: actual argument aspectsast.FunctionOrSignatureOrPropertyAccessOrStmt cannot be converted to ast.FunctionOrSignatureOrPropertyAccessOrStmt by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:16: error: aspectsast.Function is not abstract and does not override abstract method getVisible() in LocalFunctionLookupInterface
+    [javac] public class Function extends FunctionOrSignatureOrPropertyAccessOrStmt implements Cloneable, LocalFunctionLookupInterface {
+    [javac]        ^
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:1246: error: getVisible() in aspectsast.Function cannot implement getVisible() in LocalFunctionLookupInterface
+    [javac]   public Map<String,Function> getVisible() {
+    [javac]                               ^
+    [javac]   return type Map<String,aspectsast.Function> is not compatible with Map<String,ast.Function>
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:1215: error: lookupFunction(String) in aspectsast.Function cannot implement lookupFunction(String) in LocalFunctionLookupInterface
+    [javac]   public Function lookupFunction(String name) {
+    [javac]                   ^
+    [javac]   return type aspectsast.Function is not compatible with ast.Function
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:1405: error: getSiblings() in aspectsast.Function cannot implement getSiblings() in LocalFunctionLookupInterface
+    [javac]   public Map<String, Function> getSiblings() {
+    [javac]                                ^
+    [javac]   return type Map<String,aspectsast.Function> is not compatible with Map<String,ast.Function>
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:1180: error: getNested() in aspectsast.Function cannot implement getNested() in LocalFunctionLookupInterface
+    [javac]   public Map<String,Function> getNested() {
+    [javac]                               ^
+    [javac]   return type Map<String,aspectsast.Function> is not compatible with Map<String,ast.Function>
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:128: error: method caseFunction in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseFunction(this);
+    [javac]                ^
+    [javac]   required: ast.Function
+    [javac]   found: aspectsast.Function
+    [javac]   reason: actual argument aspectsast.Function cannot be converted to ast.Function by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:138: error: method weaveStmts in class AspectsEngine cannot be applied to given types;
+    [javac] 			AspectsEngine.weaveStmts(getStmts());
+    [javac] 			             ^
+    [javac]   required: ast.List<ast.Stmt>
+    [javac]   found: aspectsast.List<aspectsast.Stmt>
+    [javac]   reason: actual argument aspectsast.List<aspectsast.Stmt> cannot be converted to ast.List<ast.Stmt> by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:139: error: method weaveFunction in class AspectsEngine cannot be applied to given types;
+    [javac] 			AspectsEngine.weaveFunction(this);
+    [javac] 			             ^
+    [javac]   required: ast.Function
+    [javac]   found: aspectsast.Function
+    [javac]   reason: actual argument aspectsast.Function cannot be converted to ast.Function by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:159: error: no suitable method found for generateCorrespondingStmt(aspectsast.Function)
+    [javac] 	        AspectsEngine.generateCorrespondingStmt(this);
+    [javac] 	                     ^
+    [javac]     method AspectsEngine.generateCorrespondingStmt(ast.Function) is not applicable
+    [javac]       (actual argument aspectsast.Function cannot be converted to ast.Function by method invocation conversion)
+    [javac]     method AspectsEngine.generateCorrespondingStmt(Expr) is not applicable
+    [javac]       (actual argument aspectsast.Function cannot be converted to Expr by method invocation conversion)
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:173: error: type argument Name is not within bounds of type-variable T
+    [javac]     private ast.List<Name> InputParamNames = new ast.List<Name>();
+    [javac]                      ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:173: error: type argument Name is not within bounds of type-variable T
+    [javac]     private ast.List<Name> InputParamNames = new ast.List<Name>();
+    [javac]                                                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:179: error: type argument Name is not within bounds of type-variable T
+    [javac]   public ast.List<Name> getInputParamNames() { return InputParamNames; }
+    [javac]                   ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:185: error: type argument Name is not within bounds of type-variable T
+    [javac]   public void setInputParamNames(ast.List<Name> InputParamNames) { this.InputParamNames = InputParamNames; }
+    [javac]                                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:231: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   public void weaveGlobalStructure(ast.List<Stmt> stmts, Stmt nis) {
+    [javac]                                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:237: error: method WeaveBeforeReturn in class AspectsEngine cannot be applied to given types;
+    [javac] 		AspectsEngine.WeaveBeforeReturn(getStmts(), nis);
+    [javac] 		             ^
+    [javac]   required: ast.List<ast.Stmt>,ast.Stmt
+    [javac]   found: aspectsast.List<aspectsast.Stmt>,aspectsast.Stmt
+    [javac]   reason: actual argument aspectsast.List<aspectsast.Stmt> cannot be converted to ast.List<ast.Stmt> by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:245: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   public void weaveGlobalStructureWithEntry(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {
+    [javac]                                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:245: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   public void weaveGlobalStructureWithEntry(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {
+    [javac]                                                                                      ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:254: error: method WeaveBeforeReturn in class AspectsEngine cannot be applied to given types;
+    [javac] 			AspectsEngine.WeaveBeforeReturn(getStmts(), s);
+    [javac] 			             ^
+    [javac]   required: ast.List<ast.Stmt>,ast.Stmt
+    [javac]   found: aspectsast.List<aspectsast.Stmt>,aspectsast.Stmt
+    [javac]   reason: actual argument aspectsast.List<aspectsast.Stmt> cannot be converted to ast.List<ast.Stmt> by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:1234: error: incompatible types
+    [javac]         return getParentFunction().lookupFunction( name );
+    [javac]                                                  ^
+    [javac]   required: aspectsast.Function
+    [javac]   found:    ast.Function
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Function.java:1259: error: incompatible types
+    [javac]         Map<String,Function> table = getParentFunction().getVisible();
+    [javac]                                                                    ^
+    [javac]   required: Map<String,aspectsast.Function>
+    [javac]   found:    Map<String,ast.Function>
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Name.java:94: error: method caseName in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseName(this);
+    [javac]                ^
+    [javac]   required: ast.Name
+    [javac]   found: aspectsast.Name
+    [javac]   reason: actual argument aspectsast.Name cannot be converted to ast.Name by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Stmt.java:60: error: method caseStmt in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseStmt(this);
+    [javac]                ^
+    [javac]   required: ast.Stmt
+    [javac]   found: aspectsast.Stmt
+    [javac]   reason: actual argument aspectsast.Stmt cannot be converted to ast.Stmt by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/List.java:87: error: method caseList in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseList(this);
+    [javac]                ^
+    [javac]   required: ast.List
+    [javac]   found: aspectsast.List<T>
+    [javac]   reason: actual argument aspectsast.List<T> cannot be converted to ast.List by method invocation conversion
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class aspectsast.List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/HelpComment.java:50: error: method caseHelpComment in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseHelpComment(this);
+    [javac]                ^
+    [javac]   required: ast.HelpComment
+    [javac]   found: aspectsast.HelpComment
+    [javac]   reason: actual argument aspectsast.HelpComment cannot be converted to ast.HelpComment by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Body.java:46: error: method caseBody in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseBody(this);
+    [javac]                ^
+    [javac]   required: ast.Body
+    [javac]   found: aspectsast.Body
+    [javac]   reason: actual argument aspectsast.Body cannot be converted to ast.Body by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/AspectAction.java:16: error: AspectAction is not abstract and does not override abstract method getVisible() in LocalFunctionLookupInterface
+    [javac] public class AspectAction extends ASTNode<ASTNode> implements Cloneable, LocalFunctionLookupInterface {
+    [javac]        ^
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/AspectAction.java:955: error: getVisible() in AspectAction cannot implement getVisible() in LocalFunctionLookupInterface
+    [javac]   public Map<String, Function> getVisible() {
+    [javac]                                ^
+    [javac]   return type Map<String,aspectsast.Function> is not compatible with Map<String,ast.Function>
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/AspectAction.java:928: error: lookupFunction(String) in AspectAction cannot implement lookupFunction(String) in LocalFunctionLookupInterface
+    [javac]   public Function lookupFunction(String name) {
+    [javac]                   ^
+    [javac]   return type aspectsast.Function is not compatible with ast.Function
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/AspectAction.java:833: error: getSiblings() in AspectAction cannot implement getSiblings() in LocalFunctionLookupInterface
+    [javac]   public Map<String,Function> getSiblings() {
+    [javac]                               ^
+    [javac]   return type Map<String,aspectsast.Function> is not compatible with Map<String,ast.Function>
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/AspectAction.java:893: error: getNested() in AspectAction cannot implement getNested() in LocalFunctionLookupInterface
+    [javac]   public Map<String, Function> getNested() {
+    [javac]                                ^
+    [javac]   return type Map<String,aspectsast.Function> is not compatible with Map<String,ast.Function>
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/BinaryExpr.java:56: error: method caseBinaryExpr in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseBinaryExpr(this);
+    [javac]                ^
+    [javac]   required: ast.BinaryExpr
+    [javac]   found: aspectsast.BinaryExpr
+    [javac]   reason: actual argument aspectsast.BinaryExpr cannot be converted to ast.BinaryExpr by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/BinaryExpr.java:226: error: type argument Stmt is not within bounds of type-variable T
+    [javac]        	ast.List<Stmt> stmtList = null;
+    [javac]        	         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/BinaryExpr.java:243: error: inconvertible types
+    [javac]             stmtList = (ast.List) parentaStmt.getParent();
+    [javac]                                                        ^
+    [javac]   required: List
+    [javac]   found:    ASTNode
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/BinaryExpr.java:246: error: inconvertible types
+    [javac]             stmtList = (ast.List) parenteStmt.getParent();
+    [javac]                                                        ^
+    [javac]   required: List
+    [javac]   found:    ASTNode
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/BinaryExpr.java:255: error: method getIndexOfChild in class ASTNode<T> cannot be applied to given types;
+    [javac]       			 AspectsEngine.transformBinaryExpr(this,stmtList,stmtList.getIndexOfChild(parentaStmt));
+    [javac]       			                                                         ^
+    [javac]   required: ASTNode
+    [javac]   found: AssignStmt
+    [javac]   reason: actual argument AssignStmt cannot be converted to ASTNode by method invocation conversion
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class ASTNode
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/BinaryExpr.java:261: error: method getIndexOfChild in class ASTNode<T> cannot be applied to given types;
+    [javac]        		AspectsEngine.transformBinaryExpr(this,stmtList,stmtList.getIndexOfChild(parenteStmt));
+    [javac]        		                                                        ^
+    [javac]   required: ASTNode
+    [javac]   found: ExprStmt
+    [javac]   reason: actual argument ExprStmt cannot be converted to ASTNode by method invocation conversion
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class ASTNode
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/BinaryExpr.java:265: error: method getIndexOfChild in class ASTNode<T> cannot be applied to given types;
+    [javac]           AspectsEngine.transformBinaryExpr(this,stmtList,stmtList.getIndexOfChild(parentaStmt==null?parenteStmt:parentaStmt));
+    [javac]                                                                   ^
+    [javac]   required: ASTNode
+    [javac]   found: Stmt
+    [javac]   reason: actual argument Stmt cannot be converted to ASTNode by method invocation conversion
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class ASTNode
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/AndExpr.java:94: error: method caseAndExpr in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseAndExpr(this);
+    [javac]                ^
+    [javac]   required: ast.AndExpr
+    [javac]   found: aspectsast.AndExpr
+    [javac]   reason: actual argument aspectsast.AndExpr cannot be converted to ast.AndExpr by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/UnaryExpr.java:52: error: method caseUnaryExpr in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseUnaryExpr(this);
+    [javac]                ^
+    [javac]   required: ast.UnaryExpr
+    [javac]   found: aspectsast.UnaryExpr
+    [javac]   reason: actual argument aspectsast.UnaryExpr cannot be converted to ast.UnaryExpr by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/ArrayTransposeExpr.java:92: error: method caseArrayTransposeExpr in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseArrayTransposeExpr(this);
+    [javac]                ^
+    [javac]   required: ast.ArrayTransposeExpr
+    [javac]   found: aspectsast.ArrayTransposeExpr
+    [javac]   reason: actual argument aspectsast.ArrayTransposeExpr cannot be converted to ast.ArrayTransposeExpr by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Program.java:53: error: method caseProgram in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseProgram(this);
+    [javac]                ^
+    [javac]   required: ast.Program
+    [javac]   found: aspectsast.Program
+    [javac]   reason: actual argument aspectsast.Program cannot be converted to ast.Program by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Program.java:242: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   public Boolean weaveGlobalStructure(ast.List<Stmt> stmts, Stmt nis) {
+    [javac]                                                ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Program.java:258: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   private Boolean weaveGlobalStructure_compute(ast.List<Stmt> stmts, Stmt nis) { throw new UnsupportedOperationException(getClass().getName() + ".weaveGlobalStructure()"); }
+    [javac]                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Program.java:269: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   public Boolean weaveGlobalStructureWithEntry(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {
+    [javac]                                                                  ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Program.java:269: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   public Boolean weaveGlobalStructureWithEntry(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {
+    [javac]                                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Program.java:286: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   private Boolean weaveGlobalStructureWithEntry_compute(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) { throw new UnsupportedOperationException(getClass().getName() + ".weaveGlobalStructureWithEntry()"); }
+    [javac]                                                                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Program.java:286: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   private Boolean weaveGlobalStructureWithEntry_compute(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) { throw new UnsupportedOperationException(getClass().getName() + ".weaveGlobalStructureWithEntry()"); }
+    [javac]                                                                                                  ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Aspect.java:901: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   public Boolean weaveGlobalStructure(ast.List<Stmt> stmts, Stmt nis) {
+    [javac]                                                ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Aspect.java:917: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   private Boolean weaveGlobalStructure_compute(ast.List<Stmt> stmts, Stmt nis) {	
+    [javac]                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Aspect.java:930: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   public Boolean weaveGlobalStructureWithEntry(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {
+    [javac]                                                                  ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Aspect.java:930: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   public Boolean weaveGlobalStructureWithEntry(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {
+    [javac]                                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Aspect.java:947: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   private Boolean weaveGlobalStructureWithEntry_compute(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {	
+    [javac]                                                                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Aspect.java:947: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   private Boolean weaveGlobalStructureWithEntry_compute(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {	
+    [javac]                                                                                                  ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/ClassBody.java:46: error: method caseClassBody in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseClassBody(this);
+    [javac]                ^
+    [javac]   required: ast.ClassBody
+    [javac]   found: aspectsast.ClassBody
+    [javac]   reason: actual argument aspectsast.ClassBody cannot be converted to ast.ClassBody by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Properties.java:94: error: method caseProperties in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseProperties(this);
+    [javac]                ^
+    [javac]   required: ast.Properties
+    [javac]   found: aspectsast.Properties
+    [javac]   reason: actual argument aspectsast.Properties cannot be converted to ast.Properties by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Methods.java:16: error: Methods is not abstract and does not override abstract method getVisible() in LocalFunctionLookupInterface
+    [javac] public class Methods extends ClassBody implements Cloneable, LocalFunctionLookupInterface {
+    [javac]        ^
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Methods.java:934: error: getVisible() in Methods cannot implement getVisible() in LocalFunctionLookupInterface
+    [javac]   public Map<String, Function> getVisible() {
+    [javac]                                ^
+    [javac]   return type Map<String,aspectsast.Function> is not compatible with Map<String,ast.Function>
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Methods.java:907: error: lookupFunction(String) in Methods cannot implement lookupFunction(String) in LocalFunctionLookupInterface
+    [javac]   public Function lookupFunction(String name) {
+    [javac]                   ^
+    [javac]   return type aspectsast.Function is not compatible with ast.Function
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Methods.java:812: error: getSiblings() in Methods cannot implement getSiblings() in LocalFunctionLookupInterface
+    [javac]   public Map<String,Function> getSiblings() {
+    [javac]                               ^
+    [javac]   return type Map<String,aspectsast.Function> is not compatible with Map<String,ast.Function>
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Methods.java:872: error: getNested() in Methods cannot implement getNested() in LocalFunctionLookupInterface
+    [javac]   public Map<String, Function> getNested() {
+    [javac]                                ^
+    [javac]   return type Map<String,aspectsast.Function> is not compatible with Map<String,ast.Function>
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Methods.java:112: error: method caseMethods in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseMethods(this);
+    [javac]                ^
+    [javac]   required: ast.Methods
+    [javac]   found: aspectsast.Methods
+    [javac]   reason: actual argument aspectsast.Methods cannot be converted to ast.Methods by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Methods.java:131: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   public void weaveGlobalStructure(ast.List<Stmt> stmts, Stmt nis) {       
+    [javac]                                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Attribute.java:92: error: method caseAttribute in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseAttribute(this);
+    [javac]                ^
+    [javac]   required: ast.Attribute
+    [javac]   found: aspectsast.Attribute
+    [javac]   reason: actual argument aspectsast.Attribute cannot be converted to ast.Attribute by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Property.java:94: error: method caseProperty in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseProperty(this);
+    [javac]                ^
+    [javac]   required: ast.Property
+    [javac]   found: aspectsast.Property
+    [javac]   reason: actual argument aspectsast.Property cannot be converted to ast.Property by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Signature.java:94: error: method caseSignature in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseSignature(this);
+    [javac]                ^
+    [javac]   required: ast.Signature
+    [javac]   found: aspectsast.Signature
+    [javac]   reason: actual argument aspectsast.Signature cannot be converted to ast.Signature by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/PropertyAccess.java:94: error: method casePropertyAccess in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.casePropertyAccess(this);
+    [javac]                ^
+    [javac]   required: ast.PropertyAccess
+    [javac]   found: aspectsast.PropertyAccess
+    [javac]   reason: actual argument aspectsast.PropertyAccess cannot be converted to ast.PropertyAccess by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/PropertyAccess.java:102: error: method weaveStmts in class AspectsEngine cannot be applied to given types;
+    [javac]         AspectsEngine.weaveStmts(getStmts());
+    [javac]                      ^
+    [javac]   required: ast.List<ast.Stmt>
+    [javac]   found: aspectsast.List<aspectsast.Stmt>
+    [javac]   reason: actual argument aspectsast.List<aspectsast.Stmt> cannot be converted to ast.List<ast.Stmt> by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/PropertyAccess.java:153: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   public void weaveGlobalStructure(ast.List<Stmt> stmts, Stmt nis) {       
+    [javac]                                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/PropertyAccess.java:159: error: method WeaveBeforeReturn in class AspectsEngine cannot be applied to given types;
+    [javac] 		AspectsEngine.WeaveBeforeReturn(getStmts(), nis);
+    [javac] 		             ^
+    [javac]   required: ast.List<ast.Stmt>,ast.Stmt
+    [javac]   found: aspectsast.List<aspectsast.Stmt>,aspectsast.Stmt
+    [javac]   reason: actual argument aspectsast.List<aspectsast.Stmt> cannot be converted to ast.List<ast.Stmt> by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/AssignStmt.java:102: error: method caseAssignStmt in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseAssignStmt(this);
+    [javac]                ^
+    [javac]   required: ast.AssignStmt
+    [javac]   found: aspectsast.AssignStmt
+    [javac]   reason: actual argument aspectsast.AssignStmt cannot be converted to ast.AssignStmt by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/BreakStmt.java:94: error: method caseBreakStmt in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseBreakStmt(this);
+    [javac]                ^
+    [javac]   required: ast.BreakStmt
+    [javac]   found: aspectsast.BreakStmt
+    [javac]   reason: actual argument aspectsast.BreakStmt cannot be converted to ast.BreakStmt by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/CSLExpr.java:91: error: method caseCSLExpr in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseCSLExpr(this);
+    [javac]                ^
+    [javac]   required: ast.CSLExpr
+    [javac]   found: aspectsast.CSLExpr
+    [javac]   reason: actual argument aspectsast.CSLExpr cannot be converted to ast.CSLExpr by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/CellArrayExpr.java:96: error: method caseCellArrayExpr in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseCellArrayExpr(this);
+    [javac]                ^
+    [javac]   required: ast.CellArrayExpr
+    [javac]   found: aspectsast.CellArrayExpr
+    [javac]   reason: actual argument aspectsast.CellArrayExpr cannot be converted to ast.CellArrayExpr by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Row.java:92: error: method caseRow in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseRow(this);
+    [javac]                ^
+    [javac]   required: ast.Row
+    [javac]   found: aspectsast.Row
+    [javac]   reason: actual argument aspectsast.Row cannot be converted to ast.Row by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/CellIndexExpr.java:104: error: method caseCellIndexExpr in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseCellIndexExpr(this);
+    [javac]                ^
+    [javac]   required: ast.CellIndexExpr
+    [javac]   found: aspectsast.CellIndexExpr
+    [javac]   reason: actual argument aspectsast.CellIndexExpr cannot be converted to ast.CellIndexExpr by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/CellIndexExpr.java:443: error: no suitable method found for generateCorrespondingStmt(CellIndexExpr)
+    [javac]  		AspectsEngine.generateCorrespondingStmt(this);
+    [javac]  		             ^
+    [javac]     method AspectsEngine.generateCorrespondingStmt(Function) is not applicable
+    [javac]       (actual argument CellIndexExpr cannot be converted to Function by method invocation conversion)
+    [javac]     method AspectsEngine.generateCorrespondingStmt(Expr) is not applicable
+    [javac]       (actual argument CellIndexExpr cannot be converted to Expr by method invocation conversion)
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/CheckScalarStmt.java:90: error: method caseCheckScalarStmt in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseCheckScalarStmt(this);
+    [javac]                ^
+    [javac]   required: ast.CheckScalarStmt
+    [javac]   found: aspectsast.CheckScalarStmt
+    [javac]   reason: actual argument aspectsast.CheckScalarStmt cannot be converted to ast.CheckScalarStmt by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/ClassDef.java:100: error: method caseClassDef in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseClassDef(this);
+    [javac]                ^
+    [javac]   required: ast.ClassDef
+    [javac]   found: aspectsast.ClassDef
+    [javac]   reason: actual argument aspectsast.ClassDef cannot be converted to ast.ClassDef by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/ClassDef.java:1137: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   public Boolean weaveGlobalStructure(ast.List<Stmt> stmts, Stmt nis) {
+    [javac]                                                ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/ClassDef.java:1153: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   private Boolean weaveGlobalStructure_compute(ast.List<Stmt> stmts, Stmt nis) {
+    [javac]                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/ClassDef.java:1170: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   public Boolean weaveGlobalStructureWithEntry(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {
+    [javac]                                                                  ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/ClassDef.java:1170: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   public Boolean weaveGlobalStructureWithEntry(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {
+    [javac]                                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/ClassDef.java:1187: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   private Boolean weaveGlobalStructureWithEntry_compute(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {
+    [javac]                                                                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/ClassDef.java:1187: error: type argument Stmt is not within bounds of type-variable T
+    [javac]   private Boolean weaveGlobalStructureWithEntry_compute(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {
+    [javac]                                                                                                  ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends ASTNode declared in class List
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/SuperClass.java:92: error: method caseSuperClass in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseSuperClass(this);
+    [javac]                ^
+    [javac]   required: ast.SuperClass
+    [javac]   found: aspectsast.SuperClass
+    [javac]   reason: actual argument aspectsast.SuperClass cannot be converted to ast.SuperClass by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/ClassEvents.java:94: error: method caseClassEvents in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseClassEvents(this);
+    [javac]                ^
+    [javac]   required: ast.ClassEvents
+    [javac]   found: aspectsast.ClassEvents
+    [javac]   reason: actual argument aspectsast.ClassEvents cannot be converted to ast.ClassEvents by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/Event.java:94: error: method caseEvent in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseEvent(this);
+    [javac]                ^
+    [javac]   required: ast.Event
+    [javac]   found: aspectsast.Event
+    [javac]   reason: actual argument aspectsast.Event cannot be converted to ast.Event by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/ColonExpr.java:92: error: method caseColonExpr in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseColonExpr(this);
+    [javac]                ^
+    [javac]   required: ast.ColonExpr
+    [javac]   found: aspectsast.ColonExpr
+    [javac]   reason: actual argument aspectsast.ColonExpr cannot be converted to ast.ColonExpr by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/CompilationUnits.java:93: error: method caseCompilationUnits in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseCompilationUnits(this);
+    [javac]                ^
+    [javac]   required: ast.CompilationUnits
+    [javac]   found: aspectsast.CompilationUnits
+    [javac]   reason: actual argument aspectsast.CompilationUnits cannot be converted to ast.CompilationUnits by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/ContinueStmt.java:94: error: method caseContinueStmt in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseContinueStmt(this);
+    [javac]                ^
+    [javac]   required: ast.ContinueStmt
+    [javac]   found: aspectsast.ContinueStmt
+    [javac]   reason: actual argument aspectsast.ContinueStmt cannot be converted to ast.ContinueStmt by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/DefaultCaseBlock.java:94: error: method caseDefaultCaseBlock in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseDefaultCaseBlock(this);
+    [javac]                ^
+    [javac]   required: ast.DefaultCaseBlock
+    [javac]   found: aspectsast.DefaultCaseBlock
+    [javac]   reason: actual argument aspectsast.DefaultCaseBlock cannot be converted to ast.DefaultCaseBlock by method invocation conversion
+    [javac] /home/2008/abodza/mclabdev/languages/AspectMatlab/gen/aspectsast/DotExpr.java:102: error: method caseDotExpr in interface NatlabNodeCaseHandler cannot be applied to given types;
+    [javac]         visitor.caseDotExpr(this);
+    [javac]                ^
+    [javac]   required: ast.DotExpr
+    [javac]   found: aspectsast.DotExpr
+    [javac]   reason: actual argument aspectsast.DotExpr cannot be converted to ast.DotExpr by method invocation conversion
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 100 errors

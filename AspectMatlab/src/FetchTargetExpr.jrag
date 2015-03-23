@@ -1,0 +1,58 @@
+
+/*
+Author: Toheed Aslam
+Date: May 01, 2010
+*/
+
+import aspectMatlab.AspectsEngine;
+
+/*
+//	Fetching target in an expression
+*/
+
+aspect FetchTargetExpr {
+	
+	syn String Expr.FetchTargetExpr() = "";
+ 	
+ 	eq NameExpr.FetchTargetExpr() {
+ 		String name = getName().getID();
+ 		if(name.startsWith("AM_tmpFS_"))
+			//name = name.replace("AM_tmpFS_", "");
+			name = "";
+		else if(name.startsWith("AM_CVar_"))
+			name = "";
+		else if(!getWeavability())
+			name = "";
+ 		return name;
+	}
+	
+	eq ParameterizedExpr.FetchTargetExpr() = getTarget().FetchTargetExpr();
+
+	eq CellIndexExpr.FetchTargetExpr() = getTarget().FetchTargetExpr();
+ 	
+ 	eq DotExpr.FetchTargetExpr() {
+ 		//TODO: how about target?
+ 		//getTarget().FetchTargetExpr();
+ 		return getField().getID();
+ 	}
+ 	
+ 	eq MatrixExpr.FetchTargetExpr() {
+ 		String match = "";
+		for(Row row : getRows()) {
+			for(Expr exp : row.getElements()) {
+				match += "," + exp.FetchTargetExpr();
+			}
+        }
+        return match;
+    }
+    
+    eq UnaryExpr.FetchTargetExpr() = getOperand().FetchTargetExpr();
+    
+    eq BinaryExpr.FetchTargetExpr() = getLHS().FetchTargetExpr() + "," + getRHS().FetchTargetExpr();
+    
+    
+    syn int Expr.FetchArgsCount() = 0;
+	eq ParameterizedExpr.FetchArgsCount() = getNumArg();
+	eq CellIndexExpr.FetchArgsCount() = getNumArg();
+    
+}

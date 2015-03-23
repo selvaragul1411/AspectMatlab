@@ -1,0 +1,127 @@
+
+/*
+Author: Toheed Aslam
+Date: May 01, 2010
+*/
+
+/*
+//	Weaving global structure
+*/
+
+aspect GlobalStructure {
+
+    syn Boolean Program.weaveGlobalStructure(ast.List<Stmt> stmts, Stmt nis) { throw new UnsupportedOperationException(getClass().getName() + ".weaveGlobalStructure()"); }
+     
+	eq FunctionList.weaveGlobalStructure(ast.List<Stmt> stmts, Stmt nis) {
+		for(Function func : getFunctions()) {
+			func.weaveGlobalStructure(stmts, nis);
+		}
+
+		return true;
+    }  
+    
+    eq Script.weaveGlobalStructure(ast.List<Stmt> stmts, Stmt nis) {
+    	for(int i=stmts.getNumChild()-1; i>=0; i--) {
+    		Stmt s = stmts.getChild(i);
+			getStmts().insertChild(s, 0);
+		}
+		
+		AspectsEngine.WeaveBeforeReturn(getStmts(), nis);
+		getStmts().addChild(nis);
+		
+		return true;
+    } 
+    
+    eq ClassDef.weaveGlobalStructure(ast.List<Stmt> stmts, Stmt nis) {
+    	for(Methods methods : getMethods()) {
+            methods.weaveGlobalStructure(stmts, nis);
+        }
+        
+		return true;
+    } 
+    
+    eq Aspect.weaveGlobalStructure(ast.List<Stmt> stmts, Stmt nis) {	
+		return true;
+    }
+    
+    public void Function.weaveGlobalStructure(ast.List<Stmt> stmts, Stmt nis) {
+    	for(int i=stmts.getNumChild()-1; i>=0; i--) {
+    		Stmt s = stmts.getChild(i);
+			getStmts().insertChild(s, 0);
+		}
+		
+		AspectsEngine.WeaveBeforeReturn(getStmts(), nis);
+		getStmts().addChild(nis);
+    }
+    
+    public void Methods.weaveGlobalStructure(ast.List<Stmt> stmts, Stmt nis) {       
+        for(PropertyAccess prop : getPropAccs())
+            prop.weaveGlobalStructure(stmts, nis);
+        
+        for(Function func : getFunctions())
+            func.weaveGlobalStructure(stmts, nis);
+    }
+    
+    public void PropertyAccess.weaveGlobalStructure(ast.List<Stmt> stmts, Stmt nis) {       
+        for(int i=stmts.getNumChild()-1; i>=0; i--) {
+    		Stmt s = stmts.getChild(i);
+			getStmts().insertChild(s, 0);
+		}
+		
+		AspectsEngine.WeaveBeforeReturn(getStmts(), nis);
+		getStmts().addChild(nis);
+    }
+
+
+    syn Boolean Program.weaveGlobalStructureWithEntry(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) { throw new UnsupportedOperationException(getClass().getName() + ".weaveGlobalStructureWithEntry()"); }
+     
+	eq FunctionList.weaveGlobalStructureWithEntry(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {
+		getFunction(0).weaveGlobalStructureWithEntry(gs, bstmts, astmts);
+		
+		for(int i=1; i<getNumFunction(); i++) {
+			Function func = getFunction(i);
+			func.weaveGlobalStructureWithEntry(gs, new ast.List<Stmt>(), new ast.List<Stmt>());
+		}
+
+		return true;
+    }  
+    
+    eq ClassDef.weaveGlobalStructureWithEntry(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {
+		//maybe constructor can be an entry point?
+		return true;
+    } 
+    
+    eq Aspect.weaveGlobalStructureWithEntry(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {	
+		return true;
+    }
+    
+    eq Script.weaveGlobalStructureWithEntry(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {
+    	getStmts().insertChild(gs, 0);
+    	
+    	for(int i=bstmts.getNumChild()-1; i>=0; i--) {
+    		Stmt s = bstmts.getChild(i);
+			getStmts().insertChild(s, 1);
+		}
+		
+		for(Stmt s : astmts) {
+			AspectsEngine.WeaveBeforeReturn(getStmts(), s);
+			getStmts().addChild(s);
+		}
+		
+		return true;
+    } 
+    
+    public void Function.weaveGlobalStructureWithEntry(Stmt gs, ast.List<Stmt> bstmts, ast.List<Stmt> astmts) {
+    	getStmts().insertChild(gs, 0);
+    	
+    	for(int i=bstmts.getNumChild()-1; i>=0; i--) {
+    		Stmt s = bstmts.getChild(i);
+			getStmts().insertChild(s, 1);
+		}
+		
+		for(Stmt s : astmts) {
+			AspectsEngine.WeaveBeforeReturn(getStmts(), s);
+			getStmts().addChild(s);
+		}
+    }
+}

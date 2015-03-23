@@ -1,0 +1,44 @@
+
+/*
+Author: Toheed Aslam
+Date: May 01, 2010
+*/
+
+/*
+//	Loop Transformation
+//	keeps info about loop header and loop variables
+*/
+
+aspect LoopTransformation {
+    private boolean ForStmt.aspectTransformed = false; 
+    public boolean ForStmt.isAspectTransformed() { return aspectTransformed; }
+    public void ForStmt.setAspectTransformed(boolean aspectTransformed) { this.aspectTransformed = aspectTransformed; }
+    
+    private boolean WhileStmt.aspectTransformed = false;  
+    public boolean WhileStmt.isAspectTransformed() { return aspectTransformed; }
+    public void WhileStmt.setAspectTransformed(boolean aspectTransformed) { this.aspectTransformed = aspectTransformed; }
+    
+    private String ForStmt.loopVar = "";
+    public String ForStmt.getLoopVar() { return loopVar; }
+    public void ForStmt.setLoopVar(String loopVar) { this.loopVar = loopVar; }
+    
+    private String WhileStmt.loopVars = "";
+    public String WhileStmt.getLoopVars() { return loopVars; }
+    public void WhileStmt.setLoopVars(String loopVars) { this.loopVars = loopVars; }
+    
+    private Stmt ForStmt.loopHead = null;
+    public Stmt ForStmt.getLoopHead() { return loopHead; }
+    public void ForStmt.setLoopHead(Stmt loopHead) { this.loopHead = loopHead; }
+    
+    private Stmt WhileStmt.loopHead = null;
+    public Stmt WhileStmt.getLoopHead() { return loopHead; }
+    public void WhileStmt.setLoopHead(Stmt loopHead) { this.loopHead = loopHead; }
+    
+    private Stmt AssignStmt.boundLoop = null;
+    public Stmt AssignStmt.getBoundLoop() { return boundLoop; }
+    public void AssignStmt.setBoundLoop(Stmt boundLoop) { this.boundLoop = boundLoop; }
+    
+    private boolean AssignStmt.isLoopBound = false; 
+    public boolean AssignStmt.getLoopBound() { return isLoopBound; }
+    public void AssignStmt.setLoopBound(boolean isLoopBound) { this.isLoopBound = isLoopBound; }
+}

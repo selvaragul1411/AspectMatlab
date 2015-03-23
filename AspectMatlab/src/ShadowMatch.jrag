@@ -1,0 +1,254 @@
+
+/*
+Author: Toheed Aslam
+Date: May 01, 2010
+*/
+
+/*
+//	Matching a shadow according to patterns
+*/
+
+aspect ShadowMatch {
+	
+	
+	syn boolean Expr.ShadowMatch(String target, String pattern, int args, ASTNode jp) = false;
+ 	
+	//Match annotation arguments with the pattern to ensure correct arugments exist
+ 	private boolean PatternDesignator.matchAnnotationArgs(List<AnnoArgument> annoargs, List patternargs){
+		Iterator<AnnoArgument> argiter = annoargs.iterator();
+		Iterator patiter = patternargs.getChild(patternargs.getNumChild() - 1).iterator();		
+		int n = 0;
+		//System.out.println("Investigating paradoxes");
+		while(patiter.hasNext()){
+			if(!argiter.hasNext()){
+				return false;
+			}
+			//System.out.println("Paradox " + n);
+			//n++;
+			AnnoArgument curval = argiter.next();
+			ASTNode curpat = (ASTNode)patiter.next();			
+			if(curpat instanceof Name){
+				String argtype = ((Name)curpat).getVarName();
+				
+				//Checking argument matches the argument node in ast, return false if not
+				if(argtype.equals("var")&&!(curval instanceof AnnoName)){
+					return false;
+				}else if(argtype.equals("str")&&!(curval instanceof AnnoStringLiteralExpr)){
+					return false;
+				}else if(argtype.equals("num")&&!((curval instanceof AnnoIntLiteralExpr)||(curval instanceof AnnoFPLiteralExpr))){
+					return false;
+				}else if(argtype.equals("array")){
+					while(argtype.equals("array")){
+						if(!(curval instanceof AnnoArray)){
+							return false;
+						}else{
+							curval = ((AnnoArray)curval).getArrayElement(0);
+							curpat = (ASTNode) patiter.next();
+							argtype = ((Name)curpat).getVarName();
+						}
+						if(argtype.equals("var")&&!(curval instanceof AnnoName)){
+							return false;
+						}else if(argtype.equals("str")&&!(curval instanceof AnnoStringLiteralExpr)){
+							return false;
+						}else if(argtype.equals("num")&&!((curval instanceof AnnoIntLiteralExpr)||(curval instanceof AnnoFPLiteralExpr))){
+							return false;
+						}else if(argtype.equals("any")){
+							//is fine
+						}else{
+							return false;
+						}						
+					}
+				}else if(argtype.equals("any")){
+					//is fin
+				}else{
+					return false;
+				}
+				
+				//System.out.println(((Name)curpat).getVarName());
+				
+				
+			}else{
+				return false;
+				//System.out.println(curpat.getClass().getName());
+			}
+		}		
+		System.out.println("Matched!");
+		return true;
+	}
+
+ 	eq PatternDesignator.ShadowMatch(String target, String pattern, int args, ASTNode jp) {
+		//System.out.println("ShadowMatch: pattern = " + pattern + " target = " + target + "  args = " + args + " type = " + getName());
+ 	
+		if(getName().equals("annote")){
+			if(pattern.equals("annote")&&(((AnnotationStmt) jp).getName().equals(((Name)getArgs().getChild(0)).getVarName()))){
+				
+				boolean matchedargs;
+				matchedargs = matchAnnotationArgs(((AnnotationStmt) jp).getAnnoArguments() , getArgs());
+				if(!matchedargs){
+					System.out.print("WARNING: Annotation found on line " + ((AnnotationStmt)jp).getLineNum() + " which matched pattern ");
+					System.out.println(((AnnotationStmt) jp).getName() + " but did not match required arguments");
+					return false;
+				}else{
+					return true;
+				}
+			} //TODO
+
+			return false;
+		}
+		
+		if(getName().equals("op")){
+			String pat = getArg(0).getPrettyPrinted();
+			if(pat.equals(target) || (pat.equals("all")&&(jp instanceof BinaryExpr))){
+				return true;
+			}else if(pat.equals("matrix")){
+				//matrix match +,-,*,/,\ and ^
+				if(target.equals("PlusExpr")||target.equals("MinusExpr")
+		    	  ||target.equals("MTimesExpr")||target.equals("MLDivExpr")
+		    	  ||target.equals("MDivExpr")||target.equals("MPowExpr")){
+					return true;
+				}else{
+					return false;
+				}
+			}else if(pat.equals("arraywise")){
+				//arraywise match .*,./,.\,.^
+				if(target.equals("ETimesExpr")||target.equals("ELDivExpr")
+					      ||target.equals("EDivExpr")||target.equals("EPowExpr")){
+					return true;
+				}else{
+					return false;
+				}
+			}else{
+				return false;
+			}
+		}
+		
+
+		
+		
+		String type = getName();
+
+		String variable = "";
+		if(getArgs().getNumChild() > 0) {
+			variable = getArgs().getChild(getArgs().getNumChild()-1).getID();
+			//variable = variable.substring(variable.lastIndexOf('.')+1);
+		}
+
+		String tar = variable;
+		//System.out.println("tar = " + tar + " type = " + type);
+		String dim = "-1";
+		boolean more = false;
+		
+		if(getName().equals("istype")||getName().equals("dims")){
+			return true;
+		}
+
+		if(variable.contains("$")) {
+			tar = variable.substring(0, variable.lastIndexOf('$'));
+			dim = variable.substring(variable.lastIndexOf('$')+1);
+
+			if(dim.contains("+")) {
+				more = true;
+				dim = dim.substring(0, dim.lastIndexOf('+'));
+			}
+		}
+		//System.err.println("Type \t| Target \t| Pattern \t| Variable");
+	   // System.err.println(type + "\t:" + target + "\t:" + pattern + "\t:" + tar + "\t:" + jp.getClass());
+	    
+	    
+		if(type.compareTo("within") == 0)
+			return checkWithin(jp, (getArgs().getNumChild() < 2) ? "*":getArgs().getChild(0).getID(), tar);
+	
+		    
+		    	
+		int dims = Integer.valueOf(dim);
+		boolean match = false;
+		
+		if(
+			//Joinpoint name matching
+
+			((java.util.regex.Pattern.matches(tar, target))
+				|| (type.contains("loop") && jp instanceof Stmt && (java.util.regex.Pattern.matches(tar+",", AspectsEngine.fetchLoopVariables((Stmt)jp))))
+				|| (pattern.compareTo("getorcallsimple") == 0) //for expression simplification
+				)
+			
+			//Selective matching
+			&& (args == -1 || dims == -1 || (!more && dims == args) || (more && dims <= args))
+			
+			//Joinpoint type matching
+			&& ((type.compareTo(pattern) == 0) 
+				|| (pattern.compareTo("getorcall") == 0 && (type.compareTo("get") == 0 || type.compareTo("call") == 0 || type.compareTo("op")==0))
+				|| (pattern.compareTo("getorcallsimple") == 0 && (type.compareTo("get") == 0 || type.compareTo("call") == 0)) //for expression simplification
+				//|| (pattern.compareTo("loop") && type.contains("loop"))
+				)
+			)
+			match = true;
+		//System.out.println("ShadowMatch = " + match);
+ 		return match;
+ 	}
+ 	
+ 	eq AndExpr.ShadowMatch(String target, String pattern, int args, ASTNode jp) {
+ 		return (getLHS().ShadowMatch(target, pattern, args, jp) && getRHS().ShadowMatch(target, pattern, args, jp));
+ 	}
+ 	
+ 	eq OrExpr.ShadowMatch(String target, String pattern, int args, ASTNode jp) {
+ 		return (getLHS().ShadowMatch(target, pattern, args, jp) || getRHS().ShadowMatch(target, pattern, args, jp));
+ 	}
+ 	
+ 	eq NotExpr.ShadowMatch(String target, String pattern, int args, ASTNode jp) {
+ 		return !(getOperand().ShadowMatch(target, pattern, args, jp));
+ 	}
+ 	
+ 	eq NameExpr.ShadowMatch(String target, String pattern, int args, ASTNode jp) {
+ 		return (AspectsEngine.patternsList.containsKey(getName().getID())
+ 				&& AspectsEngine.patternsList.get(getName().getID()).ShadowMatch(target, pattern, args, jp));
+ 	}
+ 	
+	
+ 	
+ 	
+ 	private boolean PatternDesignator.checkWithin(ASTNode node, String type, String name) {
+		if(type.compareTo("*") == 0 && name.compareTo(".*") == 0)
+			return true;
+		
+		while(node != null){
+			if(node instanceof Function && (type.compareTo("*") == 0 || type.compareTo("function") == 0))
+				return (name.compareTo(".*") == 0) || (java.util.regex.Pattern.matches(name, ((Function)node).getName()));
+			else if(node instanceof ClassDef && (type.compareTo("*") == 0 || type.compareTo("class") == 0))
+				return (name.compareTo(".*") == 0) || (java.util.regex.Pattern.matches(name, ((ClassDef)node).getName()));
+			else if(node instanceof Aspect && (type.compareTo("*") == 0 || type.compareTo("aspect") == 0))
+				return (name.compareTo(".*") == 0) || (java.util.regex.Pattern.matches(name, ((Aspect)node).getName()));
+			else if(node instanceof Script && (type.compareTo("*") == 0 || type.compareTo("script") == 0)){
+				String file = ((Script)node).getFileName();
+				return (name.compareTo(".*") == 0) || (java.util.regex.Pattern.matches(name, file.substring(0, file.lastIndexOf("."))));
+			} else if((node instanceof ForStmt || node instanceof WhileStmt) && (type.compareTo("*") == 0 || type.compareTo("loop") == 0)){
+				return (name.compareTo(".*") == 0) || (java.util.regex.Pattern.matches(name+",", AspectsEngine.fetchLoopVariables((Stmt)node)));
+			} else if((node instanceof BinaryExpr) && (type.compareTo("*") == 0 || type.equals("op"))){
+				if(name.equals("PlusExpr")){
+					return (name.compareTo(".*") == 0 || (node instanceof PlusExpr));
+				}else if(name.equals("MinusExpr")){
+					return (name.compareTo(".*") == 0 || (node instanceof MinusExpr));
+				}else if(name.equals("MTimesExpr")){
+					return (name.compareTo(".*") == 0 || (node instanceof MTimesExpr));
+				}else if(name.equals("MLDivExpr")){
+					return (name.compareTo(".*") == 0 || (node instanceof MLDivExpr));
+				}else if(name.equals("ELDivExpr")){
+					return (name.compareTo(".*") == 0 || (node instanceof ELDivExpr));
+				}else if(name.equals("MDivExpr")){
+					return (name.compareTo(".*") == 0 || (node instanceof MDivExpr));
+				}else if(name.equals("EPowExpr")){
+					return (name.compareTo(".*") == 0 || (node instanceof EPowExpr));
+				}else if(name.equals("MPowExpr")){
+					return (name.compareTo(".*") == 0 || (node instanceof MPowExpr));
+				}else if(name.equals("MTransposeExpr")){
+					return (name.compareTo(".*") == 0 || (node instanceof MTransposeExpr));
+				}else if(name.equals("ArrayTransposeExpr")){
+					return (name.compareTo(".*") == 0 || (node instanceof ArrayTransposeExpr));
+				}
+			}
+			
+			node = node.getParent();
+		}
+		
+		return false;
+ 	}
+}
