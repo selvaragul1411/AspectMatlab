@@ -1,0 +1,55 @@
+clc; 
+clear all; 
+type=-1; 
+menu=[' No of Choices Enter '
+      ' -----------------------------------------------------' 
+' single phase two wire system 1 ' 
+' Three phase single circuit line 2 ' 
+' Three phase double circuit line 3 ' 
+' Exit 0 ' 
+'-----------------------------------------------------'];
+while type ~=0 
+disp(menu) 
+type=input('select a number from menu--->'); 
+switch type 
+case 1 
+disp(' single phase two wire system ') 
+disp(' ---------------------------- ') 
+disp('All the values must be in metre'); 
+D=input(' distance between the conductors:');
+ r=input(' radius of the conductors:'); 
+ L=(2*10^-7)*reallog(D/(0.7788*r));
+  C=(2*pi*8.854*10^-12)/reallog(D/r);
+   disp('Inductance in H/m')
+L
+disp('Capacitance in farad/m')
+ case 2 
+ C
+disp(' Three phase single circuit line ') 
+disp(' ------------------------------- ')
+ disp('All the values must be in metre');
+Dab=input('Distance b/w a-b:');
+ Dbc=input('Distance b/w b-c:');
+  Dca=input('Distance b/w c-a:');
+   D=(Dab*Dbc*Dca)^(1/3) 
+   r=input(' radius of the conductors:'); 
+   L=(2*10^-7)*reallog(D/(0.7788*r));
+  C=(2*pi*8.854*10^-12)/reallog(D/r);
+   disp('Average Inductance in H/m')
+L
+disp('Capacitance of conductor w.r.t neutral in farad/m') 
+case 3 
+C
+disp(' Three phase double circuit line ') 
+disp(' ---------------------------- ') 
+disp('All the values must be in metre');
+ D=input(' distance between the conductors:'); 
+ r=input(' radius of the conductors:');
+  L=(2*10^-7)*reallog(sqrt(3)*D/(2*0.7788*r)); 
+  C=(2*pi*8.854*10^-12)/reallog((sqrt(3)*D)/(2*r));
+   disp('Inductance in H/m')
+   L
+disp('Capacitance of conductor w.r.t neutral in farad/m') 
+C
+end
+ end
